@@ -6,14 +6,20 @@ namespace Tests
 {
     public class FiguresTest
     {
+        private readonly AreaCalculator _calculator;
+
+        public FiguresTest()
+        {
+            _calculator = new AreaCalculator();
+        }
+
         [Fact]
         public void CircleReturnsCorrectArea()
         {
             double radius = 5;
             double expectedArea = Math.PI * Math.Pow(radius, 2);
-            Circle circle = new Circle(radius);
 
-            double actualArea = circle.GetArea();
+            double actualArea = _calculator.CalculateArea(new Circle(radius));
 
             Assert.Equal(expectedArea, actualArea, precision: 2);
         }
@@ -32,9 +38,8 @@ namespace Tests
             double side2 = 4;
             double side3 = 5;
             double expectedArea = 6;
-            Triangle triangle = new Triangle(side1, side2, side3);
 
-            double actualArea = triangle.GetArea();
+            double actualArea = _calculator.CalculateArea(new Triangle(side1, side2, side3));
 
             Assert.Equal(expectedArea, actualArea, precision: 2);
         }
