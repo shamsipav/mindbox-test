@@ -1,3 +1,4 @@
+using MindboxLibrary;
 using MindboxLibrary.Models;
 using System;
 using Xunit;

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MindboxLibrary.Models
+namespace MindboxLibrary
 {
     public class AreaCalculator
     {
